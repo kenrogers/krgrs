@@ -1,6 +1,5 @@
 import * as React from "react";
-import { graphql } from "gatsby";
-import { MDXRenderer } from "gatsby-plugin-mdx";
+import { graphql, Link } from "gatsby";
 
 import Layout from "../components/layout";
 
@@ -9,7 +8,9 @@ const WritingPage = ({ data }) => {
     <Layout pageTitle="Writing">
       {data.allMdx.nodes.map((node) => (
         <article key={node.id}>
-          <h2>{node.frontmatter.title}</h2>
+          <h2>
+            <Link to={`/${node.slug}`}>{node.frontmatter.title}</Link>
+          </h2>
           <p>Posted: {node.frontmatter.datePublished}</p>
         </article>
       ))}
@@ -26,9 +27,7 @@ export const query = graphql`
           datePublished(formatString: "MMMM D, YYYY")
         }
         id
-        internal {
-          content
-        }
+        slug
       }
     }
   }
