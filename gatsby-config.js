@@ -10,6 +10,7 @@ module.exports = {
     "gatsby-plugin-sitemap",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    "gatsby-plugin-postcss",
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -17,6 +18,13 @@ module.exports = {
         path: "./src/writing/",
       },
       __key: "writing",
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: "./src/images/",
+      },
     },
     {
       resolve: `gatsby-plugin-mdx`,

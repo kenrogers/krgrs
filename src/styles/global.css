@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .subscribe {
+    @apply p-4 bg-indigo-600 font-bold text-center rounded transform hover:rotate-2 hover:shadow-xl cursor-pointer shadow flex justify-around items-center uppercase tracking-wide;
+  }
+  .cta {
+    @apply w-full justify-between text-xl py-1 p-4 bg-indigo-600 font-bold text-center rounded transform hover:rotate-2 hover:shadow-xl cursor-pointer shadow flex items-center uppercase tracking-wide;
+  }
+  .article h2 {
+    @apply mb-3 text-5xl font-black font-serif;
+  }
+  .article h3 {
+    @apply mb-3 text-3xl font-black font-sans opacity-60;
+  }
+  .article p {
+    @apply text-base md:text-xl mb-8 leading-loose;
+  }
+  .article ol {
+    @apply list-decimal text-base md:text-xl mb-8;
+  }
+  .article ul {
+    @apply list-disc text-base md:text-xl mb-8;
+  }
+  .article a {
+    @apply text-indigo-500 font-black underline;
+  }
+  .article .anchor-before {
+    @apply text-indigo-500;
+  }
+  a.link {
+    @apply text-indigo-500 font-black underline;
+  }
+  h1 {
+    @apply font-serif text-7xl font-black mb-6;
+  }
+}
+
+@layer utilities {
+  .wrapper {
+    background-image: url("../images/background.svg");
+  }
+}
