@@ -20,11 +20,10 @@ const Layout = ({ pageTitle, children }) => {
   return (
     <div className="wrapper bg-no-repeat bg-gray-900 text-gray-100 font-sans min-h-screen">
       <Helmet>
-        <meta name="icon" href={favicon} />
+        <title>
+          {pageTitle} | {data.site.siteMetadata.title}
+        </title>
       </Helmet>
-      <title>
-        {pageTitle} | {data.site.siteMetadata.title}
-      </title>
       <Nav />
       <main className="max-w-5xl m-auto">{children}</main>
       <footer className="flex flex-col max-w-5xl m-auto pb-24 rounded mt-24 md:mt-48">
