@@ -2,6 +2,8 @@ import * as React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import Nav from "../components/Nav";
 import { FiGithub, FiTwitter, FiLinkedin } from "react-icons/fi";
+import { Helmet } from "react-helmet";
+import favicon from "../images/favicon.ico";
 
 const Layout = ({ pageTitle, children }) => {
   const data = useStaticQuery(graphql`
@@ -17,6 +19,9 @@ const Layout = ({ pageTitle, children }) => {
 
   return (
     <div className="wrapper bg-no-repeat bg-gray-900 text-gray-100 font-sans min-h-screen">
+      <Helmet>
+        <meta name="icon" href={favicon} />
+      </Helmet>
       <title>
         {pageTitle} | {data.site.siteMetadata.title}
       </title>
