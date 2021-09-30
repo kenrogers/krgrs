@@ -4,6 +4,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import Layout from "../components/layout";
+import Subscribe from "../components/Subscribe";
 
 const Article = ({ data }) => {
   const image = getImage(data.mdx.frontmatter.hero_image);
@@ -27,6 +28,7 @@ const Article = ({ data }) => {
       <div className="w-full md:w-4/5 m-auto article mb-24 px-6">
         <MDXRenderer>{data.mdx.body}</MDXRenderer>
       </div>
+      <Subscribe />
     </Layout>
   );
 };
