@@ -19,7 +19,7 @@ const Layout = ({ pageTitle, children }) => {
   return (
     <div className="wrapper bg-no-repeat bg-gray-900 text-gray-100 font-sans min-h-screen">
       <Helmet>
-        <meta name="icon" href="/src/images/dino.png" />
+        <meta name="icon" href="/static/favicon.ico" />
       </Helmet>
       <title>
         {pageTitle} | {data.site.siteMetadata.title}
