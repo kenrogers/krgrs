@@ -16,24 +16,14 @@ export default function Subscribe() {
         method="post"
         target="popupwindow"
         onsubmit="window.open('https://buttondown.email/krgrs', 'popupwindow')"
-        class="embeddable-buttondown-form"
+        className="bg-gray-700 flex p-2 rounded"
       >
-        <label for="bd-email">Enter your email</label>
-        <input type="email" name="email" id="bd-email" />
-        <input type="submit" value="Subscribe" />
-        <p>
-          <a href="https://buttondown.email" target="_blank">
-            Powered by Buttondown.
-          </a>
-        </p>
-      </form>
-      <form className="bg-gray-700 flex p-2 rounded">
         <input
           placeholder="Enter your email"
           className="flex-grow bg-transparent border-none appearance-none text-base sm:text-lg leading-none px-2 sm:px-4 mb-1 sm:mb-0 focus:outline-none focus:border-0 focus:ring-0"
           type="email"
           name="email"
-          id="early_access_user_email"
+          id="bd-email"
         />
         <button type="submit" name="commit" className="subscribe w-1/3">
           Subscribe <FiMail />
