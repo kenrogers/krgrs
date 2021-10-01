@@ -30,6 +30,12 @@
   .article .anchor-before {
     @apply text-indigo-500;
   }
+  .article img {
+    @apply rounded shadow;
+  }
+  .article .gatsby-resp-image-background-image {
+    @apply rounded shadow;
+  }
   a.link {
     @apply text-indigo-500 font-black underline;
   }

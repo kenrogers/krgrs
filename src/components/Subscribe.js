@@ -15,7 +15,9 @@ export default function Subscribe() {
         action="https://buttondown.email/api/emails/embed-subscribe/krgrs"
         method="post"
         target="popupwindow"
-        onsubmit="window.open('https://buttondown.email/krgrs', 'popupwindow')"
+        onSubmit={() =>
+          window.open("https://buttondown.email/krgrs", "popupwindow")
+        }
         className="bg-gray-700 flex p-2 rounded"
       >
         <input
