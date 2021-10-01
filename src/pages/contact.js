@@ -12,7 +12,8 @@ const ContactPage = () => {
         <p>
           Whether you are a fellow developer looking for some advice, someone
           wanting to discuss working together, or just want to say hey, I love
-          hearing from like-minded people and would love it if you got in touch.
+          hearing from people for pretty much any reason and would love it if
+          you got in touch.
         </p>
 
         <p>The best way to do that is to email me at krogers@hey.com</p>

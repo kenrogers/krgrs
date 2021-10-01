@@ -67,17 +67,19 @@ const AboutPage = ({ data }) => {
           chops by writing about the different dev tools I am using and
           learning.
         </p>
+
         <p>
           Specifically, I am diving head first into the world of Web3 and
-          learning asmuch as I can about the massively growing ecosystem of
-          DAOs, NFTs, cryptocurrency, and all things decentralized.
+          learning as much as I can about the rapidly growing ecosystem of DAOs,
+          NFTs, cryptocurrency, and all things decentralized.
         </p>
+
         <p>
           Outside of coding, I spend as much time as I can in the mountains
           around my home in Fort Collins, CO, rucking, practicing archery,
           swinging kettlebells around, and reading. I read just about anything
-          you can think of, but have been especially interested in theology
-          recently.
+          you can think of, but have been especially interested in theology and
+          economics recently.
         </p>
 
         <p>
