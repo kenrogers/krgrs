@@ -1,0 +1,51 @@
+---
+title: "Deploying a Gatsby Site to Fleek"
+subtitle: "How to Build and Deploy a Censorship-Resistant Static Site with Gatsby and Fleek"
+datePublished: "2021-09-30"
+hero_image: "./censor.jpeg"
+hero_image_alt: "Purple and yellow static screen"
+---
+
+I just recently finished designing and building my new personal site using Gatsby and Tailwind.
+
+I built it using MDX and designed with Tailwind. I'll be writing an article soon on the process I went through for that, but one thing I really wanted to do was get it up on the blockchain at my ENS domain name, krgrs.eth.
+
+The Gatsby site is already deployed at [krgrs.dev](https://krgrs.dev) and I wanted to get a censorship-resistant one up and running and decided to go with [Fleek](https://fleek.co/) to get it done.
+
+If you've used anything along the lines of Netlify or Gatsby Cloud, Fleek will feel very familiar. The setup process is pretty straightforward. Once you create an account you'll be taken to a screen to add your new site.
+
+This is where you'll be able to connect your GitHub repo to Fleek to set up automatic deployments, just like Netlify.
+
+![Fleek's UI for connecting your GitHub repo](./fleek-site-screen.png)
+
+From here, you'll then choose the repo you want to deploy and where to host it. In my case I'll be using IPFS.
+
+![Fleek's UI for choosing your deploy location](./fleek-deploy-location.png)
+
+Finally, you'll set up your build settings. In my case, since I'm using Gatsby, Fleek detects the proper build settings automatically. You may need to adjust these depending on what framework you are using for your site build.
+
+![Fleek's UI for choosing your build settings](./fleek-build-settings.png)
+
+We'll hit the deploy button and Fleek will begin building our site, pushing it to IPFS and generating a hash for us, and deploying it to Fleek's CDN.
+
+Once the deployment is finished, Fleek gives us the URL where we can view our newly deployed site. And just like that, in just a few minutes, we have our website built and hosted on IPFS.
+
+But we aren't done yet. As I mentioned earlier, I have an ENS domain name at krgrs.eth, where I would like this site to live. Luckily, Fleek makes that super easy for us as well.
+
+After the site is deployed, we can go over to the Settings, down to Domain Management, and we see a section for ENS domains.
+
+![Fleek's UI for adding an ENS domain](./fleek-ens.png)
+
+Let's hit that Add ENS button and get our domain hooked up.
+
+This will present us a screen where we can input our ENS domain. What Fleek will do is automatically point our IPFS hash to this domain, so that whenever someone visits our ENS domain, they are served our website.
+
+Fleek will go out and check the address corresponsing to that ENS domain and point the IPFS hash to it.
+
+![Fleek's UI for verifying an ENS domain](./fleek-ens-verify.png)
+
+After you add the domain and verify that the address is correct, you'll need to use your wallet, MetaMask in my case, to set the content hash. You only have to do this once, and Fleek will automatically update the IPFS hash every time you deploy.
+
+However, at the time of writing, gas fees are astronomical and would cost me about $415 to deploy my site to my ENS domain.
+
+But, even without being able to use the ENS domain name, we still have a site hosted on IPFS that cannot be taken down, easily accessible through a normal domain name using Fleek's CDN.

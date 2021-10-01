@@ -42,17 +42,16 @@ const IndexPage = ({ data }) => {
       </div>
       <div className="w-full md:w-4/5 m-auto my-24 md:my-48">
         <h3 className="uppercase tracking-wider opacity-60 font-bold mb-6">
-          Tutorials &amp; Guides
+          Writing
         </h3>
         <h2 className="font-serif text-5xl font-black mb-6">
-          Build a successful, fulfilling career
+          Read the thoughts I think about important things
         </h2>
         <p className="mb-6 text-base md:text-xl">
-          Tutorials and guides on the latest technologies, designing and
-          building products people love, and advice on growing a successful,
-          fulfilling career as a developer.
+          Modern tech, advice on growing a successful dev career, blockchain and
+          web3, and thoughts on all kinds of other things I think are important.
         </p>
-        <Link className="cta w-1/2 md:w-1/3" to="/tutorials">
+        <Link className="cta w-1/2 md:w-1/3" to="/writing">
           Read <FiArrowRight />
         </Link>
       </div>

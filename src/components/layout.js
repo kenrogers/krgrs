@@ -40,8 +40,8 @@ const Layout = ({ pageTitle, children }) => {
               </Link>
             </li>
             <li>
-              <Link className="hover:text-indigo-500" to="/tutorials">
-                tutorials
+              <Link className="hover:text-indigo-500" to="/writing">
+                writing
               </Link>
             </li>
             <li>

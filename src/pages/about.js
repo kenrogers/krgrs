@@ -7,7 +7,7 @@ import Subscribe from "../components/Subscribe";
 
 const AboutPage = ({ data }) => {
   return (
-    <Layout pageTitle="KRGRS">
+    <Layout pageTitle="About">
       <div className="flex mt-16 md:mt-24 items-center justify-between gap-x-4 px-12">
         <div className="flex w-full mb-12">
           <div className="flex flex-col">

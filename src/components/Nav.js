@@ -32,9 +32,9 @@ export default function Nav() {
         </Link>
         <Link
           className="hover:text-indigo-600 transform hover:rotate-2 border-indigo-600"
-          to="/tutorials"
+          to="/writing"
         >
-          Tutorials
+          Writing
         </Link>
         <Link
           className="hover:text-indigo-600 transform hover:rotate-2 border-indigo-600"
