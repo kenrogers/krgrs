@@ -5,10 +5,10 @@ import Layout from "../components/layout";
 const ContactPage = () => {
   return (
     <Layout pageTitle="Get In Touch">
-      <div className="flex mt-16 md:mt-24 px-12 mb-12 w-full md:w-4/5 m-auto">
+      <div className="flex mt-16 md:mt-24 mb-12 w-full md:w-4/5 m-auto">
         <h1 className="font-serif text-7xl font-black mb-6">Get In Touch</h1>
       </div>
-      <div className="m-auto px-12 w-full md:w-4/5 text-base md:text-xl flex flex-col gap-y-4 mb-36">
+      <div className="m-auto w-full md:w-4/5 text-base md:text-xl flex flex-col gap-y-4 mb-36">
         <p>
           Whether you are a fellow developer looking for some advice, someone
           wanting to discuss working together, or just want to say hey, I love

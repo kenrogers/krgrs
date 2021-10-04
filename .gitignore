@@ -5,3 +5,4 @@ public/page-data
 public/render-page.js
 public/render-page.js.map
 .DS_Store
+src/.DS_Store

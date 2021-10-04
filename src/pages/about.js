@@ -8,12 +8,12 @@ import Subscribe from "../components/Subscribe";
 const AboutPage = ({ data }) => {
   return (
     <Layout pageTitle="About">
-      <div className="flex mt-16 md:mt-24 items-center justify-between gap-x-4 px-12">
+      <div className="flex mt-16 md:mt-24 items-center justify-between gap-x-4">
         <div className="flex w-full mb-12">
           <div className="flex flex-col">
             <h1 className="font-serif text-7xl font-black mb-6">About</h1>
             <h3 className="text-5xl opacity-70 font-black mb-6 font-serif">
-              Hi, I'm Kenny
+              Hi there, I'm Kenny
             </h3>
           </div>
         </div>
@@ -22,23 +22,16 @@ const AboutPage = ({ data }) => {
         className="rounded shadow mb-6"
         fluid={data.file.childImageSharp.fluid}
       />
-      <div className="m-auto px-12 w-full md:w-4/5 text-base md:text-xl flex flex-col gap-y-4">
+      <div className="m-auto w-full md:w-4/5 text-base md:text-xl flex flex-col gap-y-4">
         <p>
           I’m an American software developer living and working in Fort Collins,
           CO.
         </p>
 
         <p>
-          I’m a generalist that believes in having a strong grasp of the
-          fundamentals and a base technology (JavaScript in my case) while
-          having a broad range of knowledge in multiple sub-technologies with
-          the ability to quickly learn and pick up new skills.
-        </p>
-
-        <p>
-          I’m most interested in working in the intersection between design,
-          marketing, and development to design, code, and write things that make
-          life easier for people.
+          I’m a generalist that believes in having a broad range of knowledge in
+          multiple technologies with the ability to quickly learn and pick up
+          new skills.
         </p>
 
         <p>
@@ -54,6 +47,11 @@ const AboutPage = ({ data }) => {
         </p>
 
         <p>
+          Right now I am diving headfirst into web3 development to be a part of
+          building the next generation of the Internet.
+        </p>
+
+        <p>
           I view code as a means to an end, not an end in itself. Ultimately,
           every line of code I write contributes to a larger goal of improving
           some aspect of somebody’s life. This philosophy is the driving force
@@ -63,15 +61,8 @@ const AboutPage = ({ data }) => {
 
         <p>
           I currently work as a React developer and always have a side project
-          in the works. Right now I am working on my design, marketing, and SEO
-          chops by writing about the different dev tools I am using and
-          learning.
-        </p>
-
-        <p>
-          Specifically, I am diving head first into the world of Web3 and
-          learning as much as I can about the rapidly growing ecosystem of DAOs,
-          NFTs, cryptocurrency, and all things decentralized.
+          in the works. Right now I am working on my web3 chops, designing and
+          building things on the decentralized web.
         </p>
 
         <p>

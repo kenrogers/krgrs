@@ -8,21 +8,21 @@ import Subscribe from "../components/Subscribe";
 const WritingPage = ({ data }) => {
   return (
     <Layout pageTitle="Writing">
-      <div className="flex flex-col w-full md:w-4/5 mx-auto mt-16 md:mt-24 mb-24 justify-between gap-x-4 px-12">
+      <div className="flex flex-col w-full md:w-4/5 mx-auto mt-16 md:mt-24 mb-24 justify-between gap-x-4">
         <h1 className="font-serif text-7xl font-black mb-6">Writing</h1>
-        <h2 className="text-5xl opacity-70 font-black mb-6 font-serif">
+        {/* <h2 className="text-5xl opacity-70 font-black mb-6 font-serif">
           JavaScript · React · Blockchain · Web3 · Solidity · Philosophy ·
           Design · Career Advice
-        </h2>
+        </h2> */}
       </div>
-      <div className="m-auto px-12 w-full md:w-4/5 flex flex-col gap-y-4">
+      <div className="m-auto w-full md:w-4/5 flex flex-col gap-y-4">
         {data.allMdx.nodes.map((article) => {
           return (
             <div className="mb-12">
-              <h3 className="font-black text-5xl mb-6">
-                {article.frontmatter.title}
+              <h3 className="font-black text-3xl md:text-5xl mb-6">
+                <Link to={`/${article.slug}`}>{article.frontmatter.title}</Link>
               </h3>
-              <p className="font-serif text-2xl opacity-70 mb-6">
+              <p className="font-serif text-xl md:text-2xl opacity-70 mb-6">
                 {article.frontmatter.subtitle}
               </p>
               <Link
@@ -42,7 +42,10 @@ const WritingPage = ({ data }) => {
 
 export const data = graphql`
   query {
-    allMdx(sort: { fields: frontmatter___datePublished, order: DESC }) {
+    allMdx(
+      sort: { fields: frontmatter___datePublished, order: DESC }
+      filter: { frontmatter: { status: { eq: "published" } } }
+    ) {
       nodes {
         frontmatter {
           title

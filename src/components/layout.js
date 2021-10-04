@@ -25,7 +25,7 @@ const Layout = ({ pageTitle, children }) => {
         </title>
       </Helmet>
       <Nav />
-      <main className="max-w-5xl m-auto">{children}</main>
+      <main className="max-w-5xl m-auto px-12">{children}</main>
       <footer className="flex flex-col max-w-5xl m-auto pb-24 rounded mt-24 md:mt-48">
         <div className="flex flex-wrap md:flex-nowrap">
           <ul className="w-full md:w-1/3 text-center md:text-left font-bold text-xl flex flex-col gap-y-2 mb-12 md:mb-0">

@@ -43,12 +43,6 @@ export default function Nav() {
           Contact
         </Link>
       </div>
-      <Link
-        className="subscribe w-1/2 md:w-1/5 m-auto mb-6 md:mb-0 mt-0"
-        to="/subscribe"
-      >
-        Subscribe <FiMail />
-      </Link>
     </nav>
   );
 }

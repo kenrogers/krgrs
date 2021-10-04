@@ -10,23 +10,22 @@ import Subscribe from "../components/Subscribe";
 const IndexPage = ({ data }) => {
   return (
     <Layout pageTitle="KRGRS">
-      <div className="flex flex-wrap md:flex-nowrap mt-16 md:mt-24 items-center justify-between gap-x-4 px-12">
+      <div className="flex flex-wrap md:flex-nowrap mt-16 md:mt-24 items-center justify-between gap-x-4">
         <div className="flex w-full md:w-1/2 mb-12 md:mb-0">
           <div className="flex flex-col">
             <h3 className="uppercase tracking-wider opacity-60 font-bold mb-6">
-              Full-Stack JavaScript Engineer
+              Full-Stack Web3 Engineer
             </h3>
             <h1 className="font-serif text-7xl font-black mb-6">
               Hi 👋 <br />
               I'm Kenny
             </h1>
             <p className="mb-6">
-              I’m a full-stack JavaScript engineer that’s been building software
+              I’m a full-stack Web3 engineer that’s been building software
               professionally since 2014{" "}
-              <span className="opacity-70">(for fun since 2008)</span>. I create
-              tutorials and guides on using modern tech to write code and build
-              products that delight people, solve tough problems, and make life
-              better.
+              <span className="opacity-70">(for fun since 2008)</span>. I design
+              and build Web3 products, tools, and content that delight people,
+              solve tough problems, and make life better.
             </p>
             <Link className="subscribe w-1/2 md:w-1/3" to="/subscribe">
               Subscribe <FiMail />
@@ -41,10 +40,13 @@ const IndexPage = ({ data }) => {
         </div>
       </div>
       <div className="w-full md:w-4/5 m-auto my-24 md:my-48">
-        <h2 className="font-serif text-5xl font-black mb-6">Read my writing</h2>
+        <h3 className="uppercase tracking-wider opacity-60 font-bold mb-6">
+          Thoughts, guides, etc.
+        </h3>
+        <h2 className="font-serif text-5xl font-black mb-6">Writing</h2>
         <p className="mb-6 text-base md:text-xl">
-          Modern tech, advice on growing a successful dev career, blockchain and
-          web3, and thoughts on all kinds of other things I think are important.
+          Guides, tutorials, and thoughts on the decentralized web, philosophy,
+          career advice, and other interesting things.
         </p>
         <Link className="cta w-1/2 md:w-1/3" to="/writing">
           Read <FiArrowRight />

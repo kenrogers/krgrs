@@ -1,9 +1,10 @@
 ---
-title: "Deploying a Gatsby Site to Fleek"
-subtitle: "How to Build and Deploy a Censorship-Resistant Static Site with Gatsby and Fleek"
+title: "Building a Censorship-Resistant Website with Gatsby"
+subtitle: "Building and Deploying A Static Gatsby Site to Ethereum and Solana"
 datePublished: "2021-09-30"
 hero_image: "./censor.jpeg"
 hero_image_alt: "Purple and yellow static screen"
+status: "draft"
 ---
 
 I just recently finished designing and building my new personal site using Gatsby and Tailwind.
@@ -46,6 +47,38 @@ Fleek will go out and check the address corresponsing to that ENS domain and poi
 
 After you add the domain and verify that the address is correct, you'll need to use your wallet, MetaMask in my case, to set the content hash. You only have to do this once, and Fleek will automatically update the IPFS hash every time you deploy.
 
-However, at the time of writing, gas fees are astronomical and would cost me about $415 to deploy my site to my ENS domain.
+**Pay attention to the gas fees here.**
 
-But, even without being able to use the ENS domain name, we still have a site hosted on IPFS that cannot be taken down, easily accessible through a normal domain name using Fleek's CDN.
+The first time I went to point my IPFS hash to my ENS domain, it would have cost me $415 in gas. I waited a day and tried again and gas was only $29. I'm okay with that, since it's a one time fee. We only have to pay the transaction fee once so Fleek can point the IPFS hash to our ENS domain.
+
+From this point forward, Fleek will update the contents of the IPFS hash for us, so we don't have to worry about transaction fees every time we deploy.
+
+After Fleek finishes setting the hash, we can visit krgrs.eth in Brave and it just takes us to the ENS page, hmm. Not what we want.
+
+If we check Fleek, we can see that the IPFS hash is verified and working, so something is going on here with pointing the hash to the ENS domain.
+
+I'm currently chatting with the Fleek team on Discord to figure out what the issue is here.
+
+In the meantime, I want to get this site pointed to a domain on the Solana blockchain as well.
+
+I've recently gotten very interested in developing on Solana, and a company called [Bonfida](https://naming.bonfida.org) started up a domain service on Solana for .sol domains.
+
+![Bonfida's home page](./bonfida.png)
+
+In order to get that, we have to initiate an auction. The cool thing with the .sol domains is that you don't have to renew them like ENS domains. Once you buy it, you own it forever.
+
+So I go to [https://naming.bonfida.org](https://naming.bonfida.org/#/) hit the register button and begin the auction process.
+
+When registering a .sol domain, you have to start a 7 day auction process and win the auction in order to claim the domain.
+
+The minimum bid is $21 in USDC, in order to prevent people from just sitting on as many domains as they want. So I went ahead and put my bid in at that price and waited the 7 day period for the auction to end.
+
+I have some Solana in my Phantom wallet, but I need to put the bid in USDC, so I'll use Phantom to swap tokens and put my bid in at 21.1 USDC.
+
+![Bonfida's UI for domain auction](./sol-domain.png)
+
+Wait until the auction is over and...
+
+I've got my krgrs.sol domain!
+
+Now let's figure out how to get it to point to my Gatsby site.
