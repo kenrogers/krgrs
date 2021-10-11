@@ -1,13 +1,13 @@
 ---
-title: "Building a Censorship-Resistant Website with Gatsby"
-subtitle: "Building and Deploying A Static Gatsby Site to Ethereum and Solana"
+title: "Building a Censorship-Resistant Static Website with Gatsby"
+subtitle: "Building and Deploying A Static Gatsby Site to the Blockchain"
 datePublished: "2021-09-30"
 hero_image: "./censor.jpeg"
 hero_image_alt: "Purple and yellow static screen"
-status: "draft"
+status: "published"
 ---
 
-I just recently finished designing and building my new personal site using Gatsby and Tailwind.
+I just recently finished designing and building my new personal site using Gatsby and Tailwind. You can take a look at [krgrs.dev](https://krgrs.dev).
 
 I built it using MDX and designed with Tailwind. I'll be writing an article soon on the process I went through for that, but one thing I really wanted to do was get it up on the blockchain at my ENS domain name, krgrs.eth.
 
@@ -45,7 +45,7 @@ Fleek will go out and check the address corresponsing to that ENS domain and poi
 
 ![Fleek's UI for verifying an ENS domain](./fleek-ens-verify.png)
 
-After you add the domain and verify that the address is correct, you'll need to use your wallet, MetaMask in my case, to set the content hash. You only have to do this once, and Fleek will automatically update the IPFS hash every time you deploy.
+After you add the domain and verify that the address is correct, you'll need to use your wallet, MetaMask in my case, to set the content hash. You only have to do this once, and Fleek will automatically update the content at the IPFS hash every time you deploy.
 
 **Pay attention to the gas fees here.**
 
@@ -53,13 +53,9 @@ The first time I went to point my IPFS hash to my ENS domain, it would have cost
 
 From this point forward, Fleek will update the contents of the IPFS hash for us, so we don't have to worry about transaction fees every time we deploy.
 
-After Fleek finishes setting the hash, we can visit krgrs.eth in Brave and it just takes us to the ENS page, hmm. Not what we want.
+After Fleek finishes setting the hash, we can visit krgrs.eth.limo in Brave to check out the site. ENS domains need to be accessed in a compatible browser like Brave or with a wallet like MetaMask. The `.limo` and `.link` extensions allow us to view the site regardless of what kind of browser we are using.
 
-If we check Fleek, we can see that the IPFS hash is verified and working, so something is going on here with pointing the hash to the ENS domain.
-
-I'm currently chatting with the Fleek team on Discord to figure out what the issue is here.
-
-In the meantime, I want to get this site pointed to a domain on the Solana blockchain as well.
+I want to get this site pointed to a domain on the Solana blockchain as well.
 
 I've recently gotten very interested in developing on Solana, and a company called [Bonfida](https://naming.bonfida.org) started up a domain service on Solana for .sol domains.
 
@@ -81,4 +77,34 @@ Wait until the auction is over and...
 
 I've got my krgrs.sol domain!
 
-Now let's figure out how to get it to point to my Gatsby site.
+So, the first thing we need to note here is that Bonfida is asking me to choose my size.
+
+![Bonfida's UI for choosing storage size](./rent.png)
+
+What does this mean? Put simply, I need to choose how much data I am able to store on my krgrs.sol domain. This is fixed and cannot be changed later, so the pressure is on to choose the right size.
+
+The size I choose will also determine how much rent I pay. [Rent](https://docs.solana.com/implemented-proposals/rent) is a concept on Solana where you are basically paying for storage space on the Solana blockchain.
+
+So my Solana account can have both a balance (lamports) and a state (data). The amount of data I can have in my account's state is what will be affected by how much rent I pay.
+
+Since my goal is to store my static website on my sol domain, I'm going to select the maximum, 10kb. This will cost me 0.0712 SOL, which is roughly $11 at the time of this writing.
+
+_I realized after writing this that I made a very silly mistake here in thinking that the storage size correlated directly with my static site files. My files are stored on IPFS, the only content required is the IPFS hash, which could have easily been contained in a smaller size._
+
+_But, if I ever need to update the content I have 10kb, so it is what it is. Lesson learned._
+
+So in order to reserve 10kb, I'll need to pay this amount every epoch. The concept of rent is admittedly confusing for me, but there's one big caveat here.
+
+Accounts that have a balance equal to two years worth of rent are expempt from paying. At the time of this writing, my account has more than that, so I'm good here and am exempt from rent.
+
+I will still have to pay this once on the initial transaction, but as long as I maintain that two years' balance I don't have to continue to pay rent.
+
+Now, how do I actually get this domain to point to the IPFS hash where my site currently lives?
+
+Unfortunately, as far as I can tell, you can't do that yet. ENS domains are resovled by the browsers or wallet apps you have installed, they still can't be read by normal browsers.
+
+Brave and MetaMask can currently resolve ENS domains, or you can visit the `.link` or `.limo` versions of your ENS domain to view it on a normal browser.
+
+But no such resolver exists for `.sol` domains yet. Phantom recently came out with support for allowing people to transfer between accounts using `.sol` domains. So now I can send and receive Solana using `krgrs.sol`, but it doesn't look like they support resolving to content hashes like IPFS just yet.
+
+As soon as that functionality becomes available, I'll be sure to get my site up on there and write about the process.

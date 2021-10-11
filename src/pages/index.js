@@ -27,8 +27,11 @@ const IndexPage = ({ data }) => {
               and build Web3 products, tools, and content that delight people,
               solve tough problems, and make life better.
             </p>
-            <Link className="subscribe w-1/2 md:w-1/3" to="/subscribe">
-              Subscribe <FiMail />
+            <Link
+              className="p-4 bg-indigo-600 font-bold text-center rounded transform hover:rotate-2 hover:shadow-xl cursor-pointer shadow flex justify-center items-center uppercase tracking-wide gap-x-2"
+              to="/contact"
+            >
+              <span>Get In Touch</span> <FiArrowRight />
             </Link>
           </div>
         </div>

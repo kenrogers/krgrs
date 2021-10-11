@@ -1,9 +1,9 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
 import Img from "gatsby-image";
+import { FiArrowRight } from "react-icons/fi";
 
 import Layout from "../components/layout";
-import Subscribe from "../components/Subscribe";
 
 const AboutPage = ({ data }) => {
   return (
@@ -74,23 +74,17 @@ const AboutPage = ({ data }) => {
         </p>
 
         <p>
-          Right down there 👇 you can sign up to be notified via email whenever
-          I write something new.
+          Need someone to help with your next Web3 project? I'm currently
+          available for freelance and consulting.
         </p>
 
-        <p>
-          Too much commitment? You can also{" "}
-          <Link className="link" to="/writing">
-            read my stuff
-          </Link>{" "}
-          or{" "}
-          <Link className="link" to="/contact">
-            get in touch
-          </Link>{" "}
-          if you want to chat about work, fun stuff, or the meaning of life.
-        </p>
+        <Link
+          className="p-4 bg-indigo-600 font-bold text-center rounded transform hover:rotate-2 hover:shadow-xl cursor-pointer shadow flex justify-center items-center uppercase tracking-wide gap-x-2"
+          to="/contact"
+        >
+          <span>Get In Touch</span> <FiArrowRight />
+        </Link>
       </div>
-      <Subscribe />
     </Layout>
   );
 };
