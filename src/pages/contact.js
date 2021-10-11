@@ -14,7 +14,7 @@ const ContactPage = () => {
           problems to solve.
         </p>
 
-        <p>The best way to do that is to email me at krogers@hey.com</p>
+        <p>The best way to get in touch is to email me at krogers@hey.com</p>
       </div>
     </Layout>
   );
