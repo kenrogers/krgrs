@@ -23,11 +23,6 @@ const Layout = ({ pageTitle, children }) => {
         <title>
           {pageTitle} | {data.site.siteMetadata.title}
         </title>
-        <script
-          src="https://cdn.usefathom.com/script.js"
-          data-site="KIMLJKBT"
-          defer
-        ></script>
       </Helmet>
       <Nav />
       <main className="max-w-5xl m-auto px-12">{children}</main>
@@ -76,6 +71,11 @@ const Layout = ({ pageTitle, children }) => {
           Made with Gatsby, Tailwind, and 💜
         </p>
       </footer>
+      <script
+        src="https://cdn.usefathom.com/script.js"
+        data-site="KIMLJKBT"
+        defer
+      ></script>
     </div>
   );
 };
