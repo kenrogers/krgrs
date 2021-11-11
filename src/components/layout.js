@@ -23,6 +23,11 @@ const Layout = ({ pageTitle, children }) => {
         <title>
           {pageTitle} | {data.site.siteMetadata.title}
         </title>
+        <script
+          src="https://cdn.usefathom.com/script.js"
+          data-site="KIMLJKBT"
+          defer
+        ></script>
       </Helmet>
       <Nav />
       <main className="max-w-5xl m-auto px-12">{children}</main>
